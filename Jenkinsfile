@@ -5,7 +5,7 @@ environment
 {
     Maven = tool name: 'Maven_Home'
 }
-node()
+node('windows')
 {
 stage('checkout')
 {
