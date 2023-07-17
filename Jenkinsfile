@@ -11,7 +11,7 @@ stage('checkout')
 stage('build')
 {
     echo 'build the code'
-    mvn clean verify
+    sh 'mvn clean verify'
 }
 stage('test')
 {
