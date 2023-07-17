@@ -16,7 +16,7 @@ stage('checkout')
 stage('build')
 {
     echo 'build the code $env.BUILD_ID'
-    sh 'mvn clean verify'
+    bat 'mvn clean verify'
 }
 stage('test')
 {
