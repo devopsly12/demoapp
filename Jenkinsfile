@@ -1,5 +1,10 @@
 def repo = 'https://github.com/devopsly12/demoapp.git'
 def branchname = '*/main'
+
+environment 
+{
+    Maven = tool name: 'Maven_Home'
+}
 node()
 {
 stage('checkout')
@@ -10,7 +15,7 @@ stage('checkout')
 }
 stage('build')
 {
-    echo 'build the code'
+    echo 'build the code $env.BUILD_ID'
     sh 'mvn clean verify'
 }
 stage('test')
